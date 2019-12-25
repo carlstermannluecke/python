@@ -1,6 +1,6 @@
 ## Welcome to python website
 
-You can find here the [editor on GitHub](https://github.com/zainabnazari/python/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can find here the [our python code for ping pong](https://github.com/zainabnazari/python/blob/master/pingictp.ipynb) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 

@@ -15,11 +15,35 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
+import numpy as np
+from numpy.random import choice
+def tour(b,r):
+    c=b.size//2
+    pair=choice(b, size=(c,2), replace=False)
+    print("************************")
+    print("This is the",r,"round")
+    print(pair)
+    if b.size % 2 ==1:
+     notchosen=b[np.isin(b, pair)==False]
+     print("Number", notchosen, "needs to wait.")
+    winners=np.asarray(eval(input("Who (are) is the winner(s)? ")))
+    if b.size %2==1:
+     if winners.size>1:
+       lucky=np.asarray(choice(winners, size=(notchosen.size)))
+     else:
+      lucky=winners
+     print("Number", notchosen, "needs to play against", lucky)
+     who=np.asarray(eval(input("Who won? ")))
+     winners=np.asarray(np.where(winners==lucky, who, winners))
+    return winners
+p=input("Number of players: ")
+a=eval(p)
+r=1
+people=np.arange(a)
+while people.size>=2:
+      people=np.asarray(tour(people,r))
+      r=r+1
+print("Cheers!")
 
 **Bold** and _Italic_ and `Code` text
 
